@@ -1,0 +1,56 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff0f6;
+  color: #333;
+  text-align: center;
+  padding: 2em;
+}
+
+h1 {
+  color: #e75480;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.counter {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.timeline {
+  margin: 2em auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.timeline li {
+  opacity: 0;
+  transition: all 1s;
+  margin: 1em 0;
+}
+
+.timeline li.visible {
+  opacity: 1;
+}
+
+.letter {
+  background: #ffe6f2;
+  padding: 1em;
+  margin: 2em auto;
+  max-width: 400px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffd3e0;
+}
+
+.message {
+  display: none;
+  margin-top: 1em;
+  font-style: italic;
+}
