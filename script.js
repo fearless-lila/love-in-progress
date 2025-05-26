@@ -74,7 +74,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const places = [
   { name: "Edinburgh", coords: [55.9533, -3.1883], description: "Took scary attraction, missed ghost tour" },
   { name: "Wembley", coords: [51.5560, -0.2795], description: "🎶 First sex" },
-  { name: "Mornington Crescent", coords: [51.5345, -0.1381], description: "🚇 First Kiss" }
+  { name: "Embankment", coords: [51.5070, -0.1226], description: "🌉 First Kiss" }
 ];
 
 places.forEach(place => {
