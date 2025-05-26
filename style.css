@@ -108,3 +108,49 @@ h1 {
   box-shadow: 0 0 15px rgba(231, 84, 128, 0.9);
   border: 2px solid #e75480;
 }
+
+/* arrow */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.dotted-line {
+  width: 4px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Create 10 dots vertically spaced */
+.dotted-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ff4d6d 0,
+    #ff4d6d 4px,
+    transparent 4px,
+    transparent 10px
+  );
+  animation: chomping 2s linear infinite;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* Chomping animation: slides a "mask" that reveals/hides dots */
+@keyframes chomping {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 10px;
+  }
+}
