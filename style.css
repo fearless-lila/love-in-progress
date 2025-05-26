@@ -117,14 +117,14 @@ h1 {
   height: 500px;
 }
 
-.dotted-line {
+/* .dotted-line {
   width: 4px;
   height: 500px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 /* Create 10 dots vertically spaced */
 .dotted-line::before {
@@ -152,5 +152,121 @@ h1 {
   }
   50% {
     background-position: 0 10px;
+  }
+}
+
+
+
+
+
+/* test */
+
+/* Vertical dotted line */
+/* Centered floating dotted line */
+.dotted-line {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 80vh;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ff4d6d 0,
+    #ff4d6d 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  border-radius: 4px;
+  z-index: -1; /* keeps it above background, behind text if needed */
+  pointer-events: none; /* make sure it doesn’t block interaction */
+}
+
+/* Monsters — unchanged from before */
+.monster {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+  animation: moveUpDown 4s ease-in-out infinite;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.koki {
+  background: linear-gradient(135deg, #ff758c, #ff4d6d);
+  animation-delay: 0s;
+}
+
+.lila {
+  background: linear-gradient(135deg, #b98cff, #6e63d9);
+  animation-delay: 2s;
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 0 0 4px #666;
+}
+.eye.left { left: 14px; }
+.eye.right { right: 14px; }
+.eye::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+}
+
+/* Mouth */
+.mouth {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 12px;
+  border-bottom: 4px solid;
+  border-radius: 0 0 14px 14px;
+}
+.koki .mouth { border-color: #b3323a; }
+.lila .mouth { border-color: #3a2f71; }
+
+/* Horns */
+.horn {
+  position: absolute;
+  top: -14px;
+  width: 14px;
+  height: 20px;
+  border-radius: 20% 20% 80% 80% / 60% 60% 40% 40%;
+}
+.horn.left {
+  transform: rotate(-15deg);
+  left: 12px;
+}
+.horn.right {
+  transform: rotate(15deg);
+  right: 12px;
+}
+.koki .horn { background: #b3323a; }
+.lila .horn { background: #4a399f; }
+
+/* Animation for up/down motion */
+@keyframes moveUpDown {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 80%;
   }
 }
