@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Anniversary, Koki 💖</title>
   <link rel="stylesheet" href="style.css" />
+<!-- map -->
+<!-- In <head> -->
+<!-- Leaflet CSS -->
+<link 
+  rel="stylesheet" 
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+/>
+
+<!-- Leaflet JS -->
+<script 
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
+
 </head>
 <body>
 
@@ -38,19 +53,36 @@
   </div>
 </div>
 
+<!-- map -->
+<h2 style="color: #e75480;">Important Location</h2>
+<div id="map" style="height: 400px; max-width: 600px; margin: 0 auto 2em;"></div>
 
 
-<!-- ONE fixed dotted line in center -->
-  <!-- Dotted Line Centered -->
-  <div class="dotted-line">
-    <div class="pixel-monster koki"></div>
-    <div class="pixel-monster lila"></div>
-  </div>
+<!-- test -->
+ <div class="arrow-container">
+    <div class="dotted-line">
+      <div class="monster koki">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+        <div class="horn left"></div>
+        <div class="horn right"></div>
+      </div>
 
+      <div class="monster lila">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+        <div class="horn left"></div>
+        <div class="horn right"></div>
+      </div>
+    </div>
+</div>
     <div class="logo-text">
       <span class="koki-text">Koki</span> &amp; <span class="lila-text">Lila</span>
     </div>
 
+<!-- test -->
 
 
   <div class="letter" id="loveLetter">
@@ -74,29 +106,7 @@
     </div>
   </div>
 
-<!-- test -->
-    <div class="dotted-line">
-      <div class="monster koki">
-        <div class="eye left"></div>
-        <div class="eye right"></div>
-        <div class="mouth"></div>
-        <div class="horn left"></div>
-        <div class="horn right"></div>
-      </div>
 
-      <div class="monster lila">
-        <div class="eye left"></div>
-        <div class="eye right"></div>
-        <div class="mouth"></div>
-        <div class="horn left"></div>
-        <div class="horn right"></div>
-      </div>
-    </div>
-
-    <div class="logo-text">
-      <span class="koki-text">Koki</span> &amp; <span class="lila-text">Lila</span>
-    </div>
-<!-- test -->
 
   <script src="script.js"></script>
 
